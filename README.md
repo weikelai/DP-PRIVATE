@@ -37,7 +37,7 @@ DP-PRIVATE 是一个围绕“隐私保护数据外包训练”场景搭建的实
 ├── dp_experiments/
 │   ├── config.py                    # 默认实验配置
 │   ├── data_utils.py                # 数据集加载与张量提取
-│   ├── models.py                    # CNN / ResNet18 / ResNet20 分类模型
+│   ├── models.py                    # CNN / ResNet20 分类模型
 │   ├── privacy.py                   # DP 裁剪与加噪工具
 │   ├── synthesizers.py              # DP、GAN+DP、Distill+DP、Diffusion+DP 合成器
 │   ├── trainer.py                   # 下游分类器训练与评估
@@ -217,15 +217,4 @@ python dp_experiments/generate_paper_outputs.py
 - `synthetic_acc` 不能单独作为方法优劣依据，最终仍应以 `original_acc` 为主要判断指标。
 - 在当前合成数据质量下，复杂模型并不总是天然优于 CNN；ResNet20 的优势需要足够的数据规模和数据质量支撑。
 
-## 数据与版本管理说明
 
-- `*.tar.gz` 已由 Git LFS 管理，见 `.gitattributes`。
-- 数据集、输出图表、Word 报告和实验 CSV 均保留在仓库中，便于直接复查实验过程。
-- 仓库中包含部分实验缓存和 `__pycache__` 文件，这是为了完整保留当前工作区状态；如果后续要整理成更干净的开源版本，可以再补充 `.gitignore` 并清理缓存文件。
-
-## 注意事项
-
-- 大规模实验会产生较多输出文件，建议为不同实验设置独立的 `--output-root`。
-- CIFAR10 训练耗时明显高于 MNIST，ResNet20 配置在 CPU 上会更慢。
-- 如需复现实验表格，请优先使用对应输出目录中的 `metrics.csv`，不要手动重算已归档结果。
-- 如需重新推送或克隆包含 CIFAR10 压缩包的仓库，请确认 Git LFS 可用。
