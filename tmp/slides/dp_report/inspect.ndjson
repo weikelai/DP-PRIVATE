@@ -1,0 +1,619 @@
+{"kind":"deck","slideCount":10,"slideSize":{"width":1280,"height":720}}
+{"kind":"shape","slide":1,"role":"cover side panel","bbox":[0,0,405,720]}
+{"kind":"shape","slide":1,"role":"cover accent","bbox":[405,0,8,720]}
+{"kind":"image","slide":1,"role":"school logo","path":"E:\\learn_torch\\DP-private\\tmp\\ppt_template_media\\image1.png","bbox":[48,42,306,58]}
+{"kind":"shape","slide":1,"role":"kicker","bbox":[64,158,180,28]}
+{"kind":"textbox","slide":1,"role":"kicker","text":"导师汇报","textChars":4,"textLines":1,"bbox":[64,158,180,28]}
+{"kind":"shape","slide":1,"role":"cover title","bbox":[64,205,300,150]}
+{"kind":"textbox","slide":1,"role":"cover title","text":"差分隐私合成数据\n外包训练实验流程","textChars":17,"textLines":2,"bbox":[64,205,300,150]}
+{"kind":"shape","slide":1,"role":"cover subtitle","bbox":[64,386,290,96]}
+{"kind":"textbox","slide":1,"role":"cover subtitle","text":"原始图像不出本地，仅输出经隐私机制处理的合成数据；用原始验证集准确率判断外包训练可用性。","textChars":44,"textLines":1,"bbox":[64,386,290,96]}
+{"kind":"shape","slide":1,"role":"metric card","bbox":[470,154,226,142]}
+{"kind":"shape","slide":1,"role":"metric accent","bbox":[470,154,8,142]}
+{"kind":"shape","slide":1,"role":"metric value","bbox":[494,176,178,44]}
+{"kind":"textbox","slide":1,"role":"metric value","text":"98.54%±0.14pp","textChars":13,"textLines":1,"bbox":[494,176,178,44]}
+{"kind":"shape","slide":1,"role":"metric label","bbox":[494,228,178,44]}
+{"kind":"textbox","slide":1,"role":"metric label","text":"MNIST 最终 3 seeds original_acc","textChars":29,"textLines":1,"bbox":[494,228,178,44]}
+{"kind":"shape","slide":1,"role":"metric card","bbox":[732,154,226,142]}
+{"kind":"shape","slide":1,"role":"metric accent","bbox":[732,154,8,142]}
+{"kind":"shape","slide":1,"role":"metric value","bbox":[756,176,178,44]}
+{"kind":"textbox","slide":1,"role":"metric value","text":"60.32%±1.44pp","textChars":13,"textLines":1,"bbox":[756,176,178,44]}
+{"kind":"shape","slide":1,"role":"metric label","bbox":[756,228,178,44]}
+{"kind":"textbox","slide":1,"role":"metric label","text":"CIFAR10 最终 3 seeds original_acc","textChars":31,"textLines":1,"bbox":[756,228,178,44]}
+{"kind":"shape","slide":1,"role":"metric card","bbox":[994,154,226,142]}
+{"kind":"shape","slide":1,"role":"metric accent","bbox":[994,154,8,142]}
+{"kind":"shape","slide":1,"role":"metric value","bbox":[1018,176,178,44]}
+{"kind":"textbox","slide":1,"role":"metric value","text":"+13.74pp","textChars":8,"textLines":1,"bbox":[1018,176,178,44]}
+{"kind":"shape","slide":1,"role":"metric label","bbox":[1018,228,178,44]}
+{"kind":"textbox","slide":1,"role":"metric label","text":"CIFAR10 从 47.66% 提升至 61.40%","textChars":27,"textLines":1,"bbox":[1018,228,178,44]}
+{"kind":"shape","slide":1,"role":"headline panel","bbox":[470,350,750,210]}
+{"kind":"shape","slide":1,"role":"headline label","bbox":[500,382,100,26]}
+{"kind":"textbox","slide":1,"role":"headline label","text":"主结论","textChars":3,"textLines":1,"bbox":[500,382,100,26]}
+{"kind":"shape","slide":1,"role":"headline","bbox":[500,424,660,86]}
+{"kind":"textbox","slide":1,"role":"headline","text":"Diffusion+DP 是当前最值得保留的主方法：MNIST 已达到高准确率且波动很小；CIFAR10 的主要瓶颈转为合成样本质量与规模，而不是 epsilon=1.0 到 1.5 的细调。","textChars":96,"textLines":1,"bbox":[500,424,660,86]}
+{"kind":"shape","slide":1,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":1,"role":"footer","text":"汇报依据：实验流程记录 425、complete_original_models、next_priority_experiments","textChars":66,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":2,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":2,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":2,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":2,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":2,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":2,"role":"slide number","text":"02","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":2,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":2,"role":"title","text":"研究问题：原始数据不出域，外包训练是否仍可用？","textChars":23,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":2,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":2,"role":"workflow step","bbox":[78,232,230,166]}
+{"kind":"shape","slide":2,"role":"workflow title","bbox":[96,258,194,30]}
+{"kind":"textbox","slide":2,"role":"workflow title","text":"企业本地原始数据","textChars":8,"textLines":1,"bbox":[96,258,194,30]}
+{"kind":"shape","slide":2,"role":"workflow body","bbox":[96,304,194,64]}
+{"kind":"textbox","slide":2,"role":"workflow body","text":"MNIST / CIFAR10\n真实图像保留在本地","textChars":25,"textLines":2,"bbox":[96,304,194,64]}
+{"kind":"shape","slide":2,"role":"workflow arrow","bbox":[314,288,58,48]}
+{"kind":"shape","slide":2,"role":"workflow step","bbox":[372,232,230,166]}
+{"kind":"shape","slide":2,"role":"workflow title","bbox":[390,258,194,30]}
+{"kind":"textbox","slide":2,"role":"workflow title","text":"本地隐私处理","textChars":6,"textLines":1,"bbox":[390,258,194,30]}
+{"kind":"shape","slide":2,"role":"workflow body","bbox":[390,304,194,64]}
+{"kind":"textbox","slide":2,"role":"workflow body","text":"DP / GAN+DP / Distill+DP / Diffusion+DP","textChars":39,"textLines":1,"bbox":[390,304,194,64]}
+{"kind":"shape","slide":2,"role":"workflow arrow","bbox":[608,288,58,48]}
+{"kind":"shape","slide":2,"role":"workflow step","bbox":[666,232,230,166]}
+{"kind":"shape","slide":2,"role":"workflow title","bbox":[684,258,194,30]}
+{"kind":"textbox","slide":2,"role":"workflow title","text":"第三方算力训练","textChars":7,"textLines":1,"bbox":[684,258,194,30]}
+{"kind":"shape","slide":2,"role":"workflow body","bbox":[684,304,194,64]}
+{"kind":"textbox","slide":2,"role":"workflow body","text":"仅接收合成数据\n训练 CNN / ResNet20","textChars":25,"textLines":2,"bbox":[684,304,194,64]}
+{"kind":"shape","slide":2,"role":"workflow arrow","bbox":[902,288,58,48]}
+{"kind":"shape","slide":2,"role":"workflow step","bbox":[960,232,230,166]}
+{"kind":"shape","slide":2,"role":"workflow title","bbox":[978,258,194,30]}
+{"kind":"textbox","slide":2,"role":"workflow title","text":"本地评估","textChars":4,"textLines":1,"bbox":[978,258,194,30]}
+{"kind":"shape","slide":2,"role":"workflow body","bbox":[978,304,194,64]}
+{"kind":"textbox","slide":2,"role":"workflow body","text":"original_acc 作为主指标\nsynthetic_acc 作为辅助指标","textChars":39,"textLines":2,"bbox":[978,304,194,64]}
+{"kind":"shape","slide":2,"role":"formula panel","bbox":[96,466,500,74]}
+{"kind":"shape","slide":2,"role":"formula label","bbox":[114,478,150,18]}
+{"kind":"textbox","slide":2,"role":"formula label","text":"差分隐私约束","textChars":6,"textLines":1,"bbox":[114,478,150,18]}
+{"kind":"shape","slide":2,"role":"formula","bbox":[114,500,464,30]}
+{"kind":"textbox","slide":2,"role":"formula","text":"Pr[M(D) ∈ S] ≤ e^ε Pr[M(D') ∈ S] + δ","textChars":36,"textLines":1,"bbox":[114,500,464,30]}
+{"kind":"shape","slide":2,"role":"formula panel","bbox":[654,466,500,74]}
+{"kind":"shape","slide":2,"role":"formula label","bbox":[672,478,150,18]}
+{"kind":"textbox","slide":2,"role":"formula label","text":"外包训练目标","textChars":6,"textLines":1,"bbox":[672,478,150,18]}
+{"kind":"shape","slide":2,"role":"formula","bbox":[672,500,464,30]}
+{"kind":"textbox","slide":2,"role":"formula","text":"θ* = argminθ 1/|Dsyn| Σ ℓ(fθ(x), y)","textChars":35,"textLines":1,"bbox":[672,500,464,30]}
+{"kind":"shape","slide":2,"role":"bullet dot","bbox":[90,590,10,10]}
+{"kind":"shape","slide":2,"role":"bullet","bbox":[112,582,1038,35]}
+{"kind":"textbox","slide":2,"role":"bullet","text":"核心不是只看合成数据上的拟合，而是看模型能否迁移到真实原始验证集。","textChars":33,"textLines":1,"bbox":[112,582,1038,35]}
+{"kind":"shape","slide":2,"role":"bullet dot","bbox":[90,628,10,10]}
+{"kind":"shape","slide":2,"role":"bullet","bbox":[112,620,1038,35]}
+{"kind":"textbox","slide":2,"role":"bullet","text":"实验围绕隐私预算 ε、每类合成样本数 k、训练轮数和下游模型复杂度展开。","textChars":36,"textLines":1,"bbox":[112,620,1038,35]}
+{"kind":"shape","slide":2,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":2,"role":"footer","text":"数据来源：DP-private 实验记录与 dp_experiments/outputs","textChars":44,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":3,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":3,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":3,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":3,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":3,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":3,"role":"slide number","text":"03","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":3,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":3,"role":"title","text":"实验矩阵与评价指标","textChars":9,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":3,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,190,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,197,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"维度","textChars":2,"textLines":1,"bbox":[80,197,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,190,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,197,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"取值","textChars":2,"textLines":1,"bbox":[224,197,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,190,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,197,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"说明","textChars":2,"textLines":1,"bbox":[482,197,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,190,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,197,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"主输出","textChars":3,"textLines":1,"bbox":[672,197,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,190,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,197,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"本轮变化","textChars":4,"textLines":1,"bbox":[862,197,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,190,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,197,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"位置","textChars":2,"textLines":1,"bbox":[1072,197,134,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,238,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,245,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"数据集","textChars":3,"textLines":1,"bbox":[80,245,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,238,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,245,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"MNIST / CIFAR10","textChars":15,"textLines":1,"bbox":[224,245,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,238,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,245,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"灰度数字与彩色图像","textChars":9,"textLines":1,"bbox":[482,245,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,238,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,245,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"original_acc","textChars":12,"textLines":1,"bbox":[672,245,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,238,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,245,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"复跑完整矩阵","textChars":6,"textLines":1,"bbox":[862,245,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,238,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,245,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"metrics.csv","textChars":11,"textLines":1,"bbox":[1072,245,134,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,286,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,293,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"方法","textChars":2,"textLines":1,"bbox":[80,293,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,286,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,293,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"DP / GAN+DP / Distill+DP / Diffusion+DP","textChars":39,"textLines":1,"bbox":[224,293,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,286,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,293,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"四类脱敏路线","textChars":6,"textLines":1,"bbox":[482,293,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,286,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,293,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"方法排序","textChars":4,"textLines":1,"bbox":[672,293,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,286,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,293,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"最终收敛到 Diffusion+DP","textChars":18,"textLines":1,"bbox":[862,293,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,286,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,293,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"method","textChars":6,"textLines":1,"bbox":[1072,293,134,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,334,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,341,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"隐私预算","textChars":4,"textLines":1,"bbox":[80,341,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,334,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,341,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"ε=0.1/0.5/1.0；扩展 0.7/1.5/2.0","textChars":28,"textLines":1,"bbox":[224,341,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,334,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,341,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"ε 越大噪声约束越弱","textChars":10,"textLines":1,"bbox":[482,341,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,334,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,341,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"隐私-效用权衡","textChars":7,"textLines":1,"bbox":[672,341,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,334,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,341,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"局部扫参","textChars":4,"textLines":1,"bbox":[862,341,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,334,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,341,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"epsilon","textChars":7,"textLines":1,"bbox":[1072,341,134,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,382,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,389,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"样本规模","textChars":4,"textLines":1,"bbox":[80,389,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,382,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,389,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"k=160/320/640/1000","textChars":18,"textLines":1,"bbox":[224,389,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,382,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,389,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"每类合成样本数","textChars":7,"textLines":1,"bbox":[482,389,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,382,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,389,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"样本规模趋势","textChars":6,"textLines":1,"bbox":[672,389,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,382,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,389,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"CIFAR10 扩到 1000","textChars":15,"textLines":1,"bbox":[862,389,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,382,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,389,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"per_class","textChars":9,"textLines":1,"bbox":[1072,389,134,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[72,430,144,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[80,437,128,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"下游模型","textChars":4,"textLines":1,"bbox":[80,437,128,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[216,430,258,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[224,437,242,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"CNN / ResNet20","textChars":14,"textLines":1,"bbox":[224,437,242,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[474,430,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[482,437,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"保持结构不变","textChars":6,"textLines":1,"bbox":[482,437,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[664,430,190,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[672,437,174,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"训练与泛化","textChars":5,"textLines":1,"bbox":[672,437,174,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[854,430,210,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[862,437,194,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"不靠换模型提分","textChars":7,"textLines":1,"bbox":[862,437,194,38]}
+{"kind":"shape","slide":3,"role":"table cell","bbox":[1064,430,150,48]}
+{"kind":"shape","slide":3,"role":"table text","bbox":[1072,437,134,38]}
+{"kind":"textbox","slide":3,"role":"table text","text":"classifier","textChars":10,"textLines":1,"bbox":[1072,437,134,38]}
+{"kind":"shape","slide":3,"role":"table outline","bbox":[72,190,1142,288]}
+{"kind":"shape","slide":3,"role":"formula panel","bbox":[92,520,326,74]}
+{"kind":"shape","slide":3,"role":"formula label","bbox":[110,532,150,18]}
+{"kind":"textbox","slide":3,"role":"formula label","text":"主指标","textChars":3,"textLines":1,"bbox":[110,532,150,18]}
+{"kind":"shape","slide":3,"role":"formula","bbox":[110,554,290,30]}
+{"kind":"textbox","slide":3,"role":"formula","text":"Accorig = (1/N) Σ 1[fθ(xi)=yi]","textChars":30,"textLines":1,"bbox":[110,554,290,30]}
+{"kind":"shape","slide":3,"role":"formula panel","bbox":[476,520,326,74]}
+{"kind":"shape","slide":3,"role":"formula label","bbox":[494,532,150,18]}
+{"kind":"textbox","slide":3,"role":"formula label","text":"泛化差距","textChars":4,"textLines":1,"bbox":[494,532,150,18]}
+{"kind":"shape","slide":3,"role":"formula","bbox":[494,554,290,30]}
+{"kind":"textbox","slide":3,"role":"formula","text":"Gap = Accsyn − Accorig","textChars":22,"textLines":1,"bbox":[494,554,290,30]}
+{"kind":"shape","slide":3,"role":"formula panel","bbox":[860,520,326,74]}
+{"kind":"shape","slide":3,"role":"formula label","bbox":[878,532,150,18]}
+{"kind":"textbox","slide":3,"role":"formula label","text":"合成数据","textChars":4,"textLines":1,"bbox":[878,532,150,18]}
+{"kind":"shape","slide":3,"role":"formula","bbox":[878,554,290,30]}
+{"kind":"textbox","slide":3,"role":"formula","text":"Dsyn = Mε,k(Dlocal)","textChars":19,"textLines":1,"bbox":[878,554,290,30]}
+{"kind":"shape","slide":3,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":3,"role":"footer","text":"数据来源：DP-private 实验记录与 dp_experiments/outputs","textChars":44,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":4,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":4,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":4,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":4,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":4,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":4,"role":"slide number","text":"04","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":4,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":4,"role":"title","text":"基础矩阵：Diffusion+DP 先胜出，GAN+DP 暂不主攻","textChars":33,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":4,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":4,"role":"chart panel","bbox":[70,194,682,354]}
+{"kind":"chart","slide":4,"role":"完整矩阵各方法 mean original_acc（%）","chartType":"bar","bbox":[70,194,682,354]}
+{"kind":"shape","slide":4,"role":"content card","bbox":[790,190,386,96]}
+{"kind":"shape","slide":4,"role":"card accent","bbox":[790,190,386,6]}
+{"kind":"shape","slide":4,"role":"card title","bbox":[810,208,346,28]}
+{"kind":"textbox","slide":4,"role":"card title","text":"观察 1：方法排序稳定","textChars":11,"textLines":1,"bbox":[810,208,346,28]}
+{"kind":"shape","slide":4,"role":"card body","bbox":[810,248,346,20]}
+{"kind":"textbox","slide":4,"role":"card body","text":"两类数据集上 Diffusion+DP 的平均 original_acc 均最高，说明路线值得集中计算资源继续扩展。","textChars":58,"textLines":1,"bbox":[810,248,346,20]}
+{"kind":"shape","slide":4,"role":"content card","bbox":[790,312,386,96]}
+{"kind":"shape","slide":4,"role":"card accent","bbox":[790,312,386,6]}
+{"kind":"shape","slide":4,"role":"card title","bbox":[810,330,346,28]}
+{"kind":"textbox","slide":4,"role":"card title","text":"观察 2：GAN+DP 低效","textChars":14,"textLines":1,"bbox":[810,330,346,28]}
+{"kind":"shape","slide":4,"role":"card body","bbox":[810,370,346,20]}
+{"kind":"textbox","slide":4,"role":"card body","text":"当前轻量 GAN 设置下接近随机水平，生成耗时较高，后续不作为主攻方向。","textChars":36,"textLines":1,"bbox":[810,370,346,20]}
+{"kind":"shape","slide":4,"role":"content card","bbox":[790,434,386,114]}
+{"kind":"shape","slide":4,"role":"card accent","bbox":[790,434,386,6]}
+{"kind":"shape","slide":4,"role":"card title","bbox":[810,452,346,28]}
+{"kind":"textbox","slide":4,"role":"card title","text":"观察 3：synthetic_acc 需谨慎","textChars":22,"textLines":1,"bbox":[810,452,346,28]}
+{"kind":"shape","slide":4,"role":"card body","bbox":[810,492,346,38]}
+{"kind":"textbox","slide":4,"role":"card body","text":"Distillation+DP 在合成域可能很高，但真实验证集不稳定，提示必须以 original_acc 为主。","textChars":57,"textLines":1,"bbox":[810,492,346,38]}
+{"kind":"shape","slide":4,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":4,"role":"footer","text":"统计口径：complete_original_models/mnist 与 cifar10 的 48 行完整矩阵","textChars":56,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":5,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":5,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":5,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":5,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":5,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":5,"role":"slide number","text":"05","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":5,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":5,"role":"title","text":"评估方式修正：避免合成训练集自测虚高","textChars":18,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":5,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":5,"role":"split box","bbox":[88,208,294,128]}
+{"kind":"shape","slide":5,"role":"old label","bbox":[112,232,100,28]}
+{"kind":"textbox","slide":5,"role":"old label","text":"旧口径","textChars":3,"textLines":1,"bbox":[112,232,100,28]}
+{"kind":"shape","slide":5,"role":"old body","bbox":[112,274,230,44]}
+{"kind":"textbox","slide":5,"role":"old body","text":"合成样本既训练又测试\nsynthetic_acc 可能反映记忆","textChars":31,"textLines":2,"bbox":[112,274,230,44]}
+{"kind":"shape","slide":5,"role":"correction arrow","bbox":[416,246,80,54]}
+{"kind":"shape","slide":5,"role":"split box","bbox":[532,208,560,128]}
+{"kind":"shape","slide":5,"role":"new label","bbox":[560,232,300,28]}
+{"kind":"textbox","slide":5,"role":"new label","text":"新口径：按类别 8:2 拆分","textChars":14,"textLines":1,"bbox":[560,232,300,28]}
+{"kind":"shape","slide":5,"role":"new body","bbox":[560,274,480,44]}
+{"kind":"textbox","slide":5,"role":"new body","text":"80% Dsyn_train 训练分类器；20% Dsyn_eval 计算 synthetic_acc；原始验证集计算 original_acc。","textChars":73,"textLines":1,"bbox":[560,274,480,44]}
+{"kind":"shape","slide":5,"role":"formula panel","bbox":[110,408,440,74]}
+{"kind":"shape","slide":5,"role":"formula label","bbox":[128,420,150,18]}
+{"kind":"textbox","slide":5,"role":"formula label","text":"拆分公式","textChars":4,"textLines":1,"bbox":[128,420,150,18]}
+{"kind":"shape","slide":5,"role":"formula","bbox":[128,442,404,30]}
+{"kind":"textbox","slide":5,"role":"formula","text":"Dsyn = Dtrain_syn ∪ Deval_syn,  |Deval|/|Dsyn| = 0.2","textChars":52,"textLines":1,"bbox":[128,442,404,30]}
+{"kind":"shape","slide":5,"role":"formula panel","bbox":[640,408,440,74]}
+{"kind":"shape","slide":5,"role":"formula label","bbox":[658,420,150,18]}
+{"kind":"textbox","slide":5,"role":"formula label","text":"排序原则","textChars":4,"textLines":1,"bbox":[658,420,150,18]}
+{"kind":"shape","slide":5,"role":"formula","bbox":[658,442,404,30]}
+{"kind":"textbox","slide":5,"role":"formula","text":"Ranking = sort_by(original_acc)","textChars":31,"textLines":1,"bbox":[658,442,404,30]}
+{"kind":"shape","slide":5,"role":"bullet dot","bbox":[124,548,10,10]}
+{"kind":"shape","slide":5,"role":"bullet","bbox":[146,540,974,33]}
+{"kind":"textbox","slide":5,"role":"bullet","text":"修正后 synthetic_acc 是辅助指标，主要用于观察合成域内泛化。","textChars":37,"textLines":1,"bbox":[146,540,974,33]}
+{"kind":"shape","slide":5,"role":"bullet dot","bbox":[124,584,10,10]}
+{"kind":"shape","slide":5,"role":"bullet","bbox":[146,576,974,33]}
+{"kind":"textbox","slide":5,"role":"bullet","text":"original_acc 代表模型在真实原始分布上的可用性，是汇报里的主指标。","textChars":39,"textLines":1,"bbox":[146,576,974,33]}
+{"kind":"shape","slide":5,"role":"bullet dot","bbox":[124,620,10,10]}
+{"kind":"shape","slide":5,"role":"bullet","bbox":[146,612,974,33]}
+{"kind":"textbox","slide":5,"role":"bullet","text":"视觉质量统计同时裁掉标题和空白区域，使 SSIM/PSNR 更接近主体图像差异。","textChars":40,"textLines":1,"bbox":[146,612,974,33]}
+{"kind":"shape","slide":5,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":5,"role":"footer","text":"对应代码：trainer.py、run_pipeline.py、generate_paper_outputs.py","textChars":57,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":6,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":6,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":6,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":6,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":6,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":6,"role":"slide number","text":"06","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":6,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":6,"role":"title","text":"完整矩阵复跑：MNIST 接近可用，CIFAR10 仍是难点","textChars":30,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":6,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":6,"role":"metric card","bbox":[84,190,260,136]}
+{"kind":"shape","slide":6,"role":"metric accent","bbox":[84,190,8,136]}
+{"kind":"shape","slide":6,"role":"metric value","bbox":[108,212,212,44]}
+{"kind":"textbox","slide":6,"role":"metric value","text":"96.91%","textChars":6,"textLines":1,"bbox":[108,212,212,44]}
+{"kind":"shape","slide":6,"role":"metric label","bbox":[108,264,212,44]}
+{"kind":"textbox","slide":6,"role":"metric label","text":"MNIST 最优：Diffusion+DP, ε=0.5, k=320, ResNet20","textChars":45,"textLines":1,"bbox":[108,264,212,44]}
+{"kind":"shape","slide":6,"role":"metric card","bbox":[374,190,260,136]}
+{"kind":"shape","slide":6,"role":"metric accent","bbox":[374,190,8,136]}
+{"kind":"shape","slide":6,"role":"metric value","bbox":[398,212,212,44]}
+{"kind":"textbox","slide":6,"role":"metric value","text":"47.66%","textChars":6,"textLines":1,"bbox":[398,212,212,44]}
+{"kind":"shape","slide":6,"role":"metric label","bbox":[398,264,212,44]}
+{"kind":"textbox","slide":6,"role":"metric label","text":"CIFAR10 最优：Diffusion+DP, ε=1.0, k=320, CNN","textChars":42,"textLines":1,"bbox":[398,264,212,44]}
+{"kind":"shape","slide":6,"role":"metric card","bbox":[664,190,260,136]}
+{"kind":"shape","slide":6,"role":"metric accent","bbox":[664,190,8,136]}
+{"kind":"shape","slide":6,"role":"metric value","bbox":[688,212,212,44]}
+{"kind":"textbox","slide":6,"role":"metric value","text":"91.82%","textChars":6,"textLines":1,"bbox":[688,212,212,44]}
+{"kind":"shape","slide":6,"role":"metric label","bbox":[688,264,212,44]}
+{"kind":"textbox","slide":6,"role":"metric label","text":"MNIST Diffusion+DP 平均 original_acc","textChars":34,"textLines":1,"bbox":[688,264,212,44]}
+{"kind":"shape","slide":6,"role":"metric card","bbox":[954,190,260,136]}
+{"kind":"shape","slide":6,"role":"metric accent","bbox":[954,190,8,136]}
+{"kind":"shape","slide":6,"role":"metric value","bbox":[978,212,212,44]}
+{"kind":"textbox","slide":6,"role":"metric value","text":"40.66%","textChars":6,"textLines":1,"bbox":[978,212,212,44]}
+{"kind":"shape","slide":6,"role":"metric label","bbox":[978,264,212,44]}
+{"kind":"textbox","slide":6,"role":"metric label","text":"CIFAR10 Diffusion+DP 平均 original_acc","textChars":36,"textLines":1,"bbox":[978,264,212,44]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[92,374,154,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[100,381,138,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"数据集","textChars":3,"textLines":1,"bbox":[100,381,138,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[246,374,198,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[254,381,182,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"最佳方法","textChars":4,"textLines":1,"bbox":[254,381,182,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[444,374,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[452,381,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"ε","textChars":1,"textLines":1,"bbox":[452,381,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[544,374,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[552,381,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"k","textChars":1,"textLines":1,"bbox":[552,381,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[644,374,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[652,381,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"分类器","textChars":3,"textLines":1,"bbox":[652,381,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[782,374,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[790,381,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"original_acc","textChars":12,"textLines":1,"bbox":[790,381,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[920,374,142,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[928,381,126,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"synthetic_acc","textChars":13,"textLines":1,"bbox":[928,381,126,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[92,416,154,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[100,423,138,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"MNIST","textChars":5,"textLines":1,"bbox":[100,423,138,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[246,416,198,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[254,423,182,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"Diffusion+DP","textChars":12,"textLines":1,"bbox":[254,423,182,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[444,416,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[452,423,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"0.5","textChars":3,"textLines":1,"bbox":[452,423,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[544,416,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[552,423,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"320","textChars":3,"textLines":1,"bbox":[552,423,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[644,416,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[652,423,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"ResNet20","textChars":8,"textLines":1,"bbox":[652,423,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[782,416,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[790,423,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"96.91%","textChars":6,"textLines":1,"bbox":[790,423,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[920,416,142,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[928,423,126,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"95.94%","textChars":6,"textLines":1,"bbox":[928,423,126,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[92,458,154,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[100,465,138,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"CIFAR10","textChars":7,"textLines":1,"bbox":[100,465,138,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[246,458,198,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[254,465,182,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"Diffusion+DP","textChars":12,"textLines":1,"bbox":[254,465,182,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[444,458,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[452,465,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"1.0","textChars":3,"textLines":1,"bbox":[452,465,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[544,458,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[552,465,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"320","textChars":3,"textLines":1,"bbox":[552,465,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[644,458,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[652,465,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"CNN","textChars":3,"textLines":1,"bbox":[652,465,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[782,458,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[790,465,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"47.66%","textChars":6,"textLines":1,"bbox":[790,465,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[920,458,142,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[928,465,126,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"46.88%","textChars":6,"textLines":1,"bbox":[928,465,126,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[92,500,154,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[100,507,138,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"结论","textChars":2,"textLines":1,"bbox":[100,507,138,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[246,500,198,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[254,507,182,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"Diffusion+DP 平均最高","textChars":17,"textLines":1,"bbox":[254,507,182,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[444,500,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[452,507,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"-","textChars":1,"textLines":1,"bbox":[452,507,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[544,500,100,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[552,507,84,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"-","textChars":1,"textLines":1,"bbox":[552,507,84,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[644,500,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[652,507,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"保持模型不变","textChars":6,"textLines":1,"bbox":[652,507,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[782,500,138,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[790,507,122,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"主指标","textChars":3,"textLines":1,"bbox":[790,507,122,32]}
+{"kind":"shape","slide":6,"role":"table cell","bbox":[920,500,142,42]}
+{"kind":"shape","slide":6,"role":"table text","bbox":[928,507,126,32]}
+{"kind":"textbox","slide":6,"role":"table text","text":"辅助指标","textChars":4,"textLines":1,"bbox":[928,507,126,32]}
+{"kind":"shape","slide":6,"role":"table outline","bbox":[92,374,970,168]}
+{"kind":"shape","slide":6,"role":"bullet dot","bbox":[112,578,10,10]}
+{"kind":"shape","slide":6,"role":"bullet","bbox":[134,570,978,35]}
+{"kind":"textbox","slide":6,"role":"bullet","text":"MNIST 已接近可用，主要改进空间转为稳定性与重复实验。","textChars":29,"textLines":1,"bbox":[134,570,978,35]}
+{"kind":"shape","slide":6,"role":"bullet dot","bbox":[112,616,10,10]}
+{"kind":"shape","slide":6,"role":"bullet","bbox":[134,608,978,35]}
+{"kind":"textbox","slide":6,"role":"bullet","text":"CIFAR10 明显更难，说明复杂彩色图像受合成质量和样本规模限制更大。","textChars":36,"textLines":1,"bbox":[134,608,978,35]}
+{"kind":"shape","slide":6,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":6,"role":"footer","text":"数据来源：DP-private 实验记录与 dp_experiments/outputs","textChars":44,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":7,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":7,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":7,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":7,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":7,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":7,"role":"slide number","text":"07","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":7,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":7,"role":"title","text":"只扩 Diffusion+DP：样本规模带来主要收益","textChars":26,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":7,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":7,"role":"chart panel","bbox":[74,198,530,340]}
+{"kind":"chart","slide":7,"role":"上一轮最优 vs 扩展后单次最优（%）","chartType":"bar","bbox":[74,198,530,340]}
+{"kind":"shape","slide":7,"role":"chart panel","bbox":[646,198,530,340]}
+{"kind":"chart","slide":7,"role":"CIFAR10 Diffusion+DP sweep: k 与 original_acc（%）","chartType":"line","bbox":[646,198,530,340]}
+{"kind":"shape","slide":7,"role":"bullet dot","bbox":[106,578,10,10]}
+{"kind":"shape","slide":7,"role":"bullet","bbox":[128,570,1028,31]}
+{"kind":"textbox","slide":7,"role":"bullet","text":"CIFAR10 从 47.66% 提升到 61.40%，主要来自 k=320 → 1000。","textChars":46,"textLines":1,"bbox":[128,570,1028,31]}
+{"kind":"shape","slide":7,"role":"bullet dot","bbox":[106,612,10,10]}
+{"kind":"shape","slide":7,"role":"bullet","bbox":[128,604,1028,31]}
+{"kind":"textbox","slide":7,"role":"bullet","text":"MNIST 从 96.91% 提升到 98.72%，已进入稳定高精度区间。","textChars":37,"textLines":1,"bbox":[128,604,1028,31]}
+{"kind":"shape","slide":7,"role":"bullet dot","bbox":[106,646,10,10]}
+{"kind":"shape","slide":7,"role":"bullet","bbox":[128,638,1028,31]}
+{"kind":"textbox","slide":7,"role":"bullet","text":"epsilon=1.0 与 1.5 在 CIFAR10 上差距很小，后续更该关注样本质量。","textChars":45,"textLines":1,"bbox":[128,638,1028,31]}
+{"kind":"shape","slide":7,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":7,"role":"footer","text":"扩展口径：next_priority_experiments/diffusion_sweep_all.csv","textChars":54,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":8,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":8,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":8,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":8,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":8,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":8,"role":"slide number","text":"08","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":8,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":8,"role":"title","text":"最终结果：3 seeds 均值与标准差作为主结论","textChars":24,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":8,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":8,"role":"chart panel","bbox":[70,192,590,348]}
+{"kind":"chart","slide":8,"role":"最终候选 original_acc mean（%）","chartType":"bar","bbox":[70,192,590,348]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[700,202,180,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[708,209,164,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"配置","textChars":2,"textLines":1,"bbox":[708,209,164,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[880,202,112,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[888,209,96,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"n","textChars":1,"textLines":1,"bbox":[888,209,96,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[992,202,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1000,209,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"original_acc","textChars":12,"textLines":1,"bbox":[1000,209,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[1146,202,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1154,209,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"训练时间","textChars":4,"textLines":1,"bbox":[1154,209,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[700,254,180,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[708,261,164,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"CIFAR10 ε=1.5,k=1000,CNN","textChars":24,"textLines":1,"bbox":[708,261,164,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[880,254,112,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[888,261,96,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"3","textChars":1,"textLines":1,"bbox":[888,261,96,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[992,254,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1000,261,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"60.32%±1.44pp","textChars":13,"textLines":1,"bbox":[1000,261,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[1146,254,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1154,261,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"37.25s","textChars":6,"textLines":1,"bbox":[1154,261,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[700,306,180,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[708,313,164,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"CIFAR10 ε=1.0,k=1000,CNN","textChars":24,"textLines":1,"bbox":[708,313,164,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[880,306,112,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[888,313,96,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"3","textChars":1,"textLines":1,"bbox":[888,313,96,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[992,306,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1000,313,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"60.22%±1.46pp","textChars":13,"textLines":1,"bbox":[1000,313,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[1146,306,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1154,313,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"37.40s","textChars":6,"textLines":1,"bbox":[1154,313,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[700,358,180,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[708,365,164,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"MNIST ε=0.5,k=640,ResNet20","textChars":26,"textLines":1,"bbox":[708,365,164,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[880,358,112,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[888,365,96,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"3","textChars":1,"textLines":1,"bbox":[888,365,96,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[992,358,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1000,365,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"98.54%±0.14pp","textChars":13,"textLines":1,"bbox":[1000,365,138,42]}
+{"kind":"shape","slide":8,"role":"table cell","bbox":[1146,358,154,52]}
+{"kind":"shape","slide":8,"role":"table text","bbox":[1154,365,138,42]}
+{"kind":"textbox","slide":8,"role":"table text","text":"137.76s","textChars":7,"textLines":1,"bbox":[1154,365,138,42]}
+{"kind":"shape","slide":8,"role":"table outline","bbox":[700,202,600,208]}
+{"kind":"shape","slide":8,"role":"content card","bbox":[704,466,430,86]}
+{"kind":"shape","slide":8,"role":"card accent","bbox":[704,466,430,6]}
+{"kind":"shape","slide":8,"role":"card title","bbox":[724,484,390,28]}
+{"kind":"textbox","slide":8,"role":"card title","text":"采用理由","textChars":4,"textLines":1,"bbox":[724,484,390,28]}
+{"kind":"shape","slide":8,"role":"card body","bbox":[724,524,390,10]}
+{"kind":"textbox","slide":8,"role":"card body","text":"不直接采用单次最高值，而用 3 个随机种子均值和标准差降低随机训练波动对结论的影响。","textChars":42,"textLines":1,"bbox":[724,524,390,10]}
+{"kind":"shape","slide":8,"role":"bullet dot","bbox":[106,588,10,10]}
+{"kind":"shape","slide":8,"role":"bullet","bbox":[128,580,1018,33]}
+{"kind":"textbox","slide":8,"role":"bullet","text":"MNIST 波动很小，可作为阶段性稳定结果保留。","textChars":24,"textLines":1,"bbox":[128,580,1018,33]}
+{"kind":"shape","slide":8,"role":"bullet dot","bbox":[106,624,10,10]}
+{"kind":"shape","slide":8,"role":"bullet","bbox":[128,616,1018,33]}
+{"kind":"textbox","slide":8,"role":"bullet","text":"CIFAR10 两个 ε 候选接近，说明当前瓶颈不在 1.0/1.5 的细小差异。","textChars":41,"textLines":1,"bbox":[128,616,1018,33]}
+{"kind":"shape","slide":8,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":8,"role":"footer","text":"统计口径：next_priority_experiments/repeats_summary.csv","textChars":50,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":9,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":9,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":9,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":9,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":9,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":9,"role":"slide number","text":"09","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":9,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":9,"role":"title","text":"视觉对比：合成样本保留结构，但 CIFAR10 仍有质量瓶颈","textChars":30,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":9,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":9,"role":"image panel","bbox":[70,190,548,330]}
+{"kind":"shape","slide":9,"role":"image title","bbox":[94,208,410,24]}
+{"kind":"textbox","slide":9,"role":"image title","text":"CIFAR10: Diffusion+DP ε=1.5, k=1000","textChars":35,"textLines":1,"bbox":[94,208,410,24]}
+{"kind":"image","slide":9,"role":"cifar sample comparison","path":"E:\\learn_torch\\DP-private\\dp_experiments\\outputs\\next_priority_experiments\\repeats\\cifar10_eps1p5_k1000_cnn_seed42\\visuals\\cifar10\\diffusion_dp_eps_1.5_k_1000.png","bbox":[94,244,500,250]}
+{"kind":"shape","slide":9,"role":"image panel","bbox":[664,190,548,330]}
+{"kind":"shape","slide":9,"role":"image title","bbox":[688,208,410,24]}
+{"kind":"textbox","slide":9,"role":"image title","text":"MNIST: Diffusion+DP ε=0.5, k=640","textChars":32,"textLines":1,"bbox":[688,208,410,24]}
+{"kind":"image","slide":9,"role":"mnist sample comparison","path":"E:\\learn_torch\\DP-private\\dp_experiments\\outputs\\next_priority_experiments\\repeats\\mnist_eps0p5_k640_resnet20_seed42\\visuals\\mnist\\diffusion_dp_eps_0.5_k_640.png","bbox":[688,244,500,250]}
+{"kind":"shape","slide":9,"role":"content card","bbox":[94,548,334,82]}
+{"kind":"shape","slide":9,"role":"card accent","bbox":[94,548,334,6]}
+{"kind":"shape","slide":9,"role":"card title","bbox":[114,566,294,28]}
+{"kind":"textbox","slide":9,"role":"card title","text":"读图重点","textChars":4,"textLines":1,"bbox":[114,566,294,28]}
+{"kind":"shape","slide":9,"role":"card body","bbox":[114,606,294,6]}
+{"kind":"textbox","slide":9,"role":"card body","text":"左侧为真实近邻，右侧为合成图；MNIST 结构更清晰，CIFAR10 保留语义但纹理仍弱。","textChars":45,"textLines":1,"bbox":[114,606,294,6]}
+{"kind":"shape","slide":9,"role":"content card","bbox":[474,548,334,82]}
+{"kind":"shape","slide":9,"role":"card accent","bbox":[474,548,334,6]}
+{"kind":"shape","slide":9,"role":"card title","bbox":[494,566,294,28]}
+{"kind":"textbox","slide":9,"role":"card title","text":"质量指标","textChars":4,"textLines":1,"bbox":[494,566,294,28]}
+{"kind":"shape","slide":9,"role":"card body","bbox":[494,606,294,6]}
+{"kind":"textbox","slide":9,"role":"card body","text":"修正后 SSIM/PSNR 去掉标题和白边影响，视觉指标应和 original_acc 联合解释。","textChars":49,"textLines":1,"bbox":[494,606,294,6]}
+{"kind":"shape","slide":9,"role":"content card","bbox":[854,548,334,82]}
+{"kind":"shape","slide":9,"role":"card accent","bbox":[854,548,334,6]}
+{"kind":"shape","slide":9,"role":"card title","bbox":[874,566,294,28]}
+{"kind":"textbox","slide":9,"role":"card title","text":"汇报口径","textChars":4,"textLines":1,"bbox":[874,566,294,28]}
+{"kind":"shape","slide":9,"role":"card body","bbox":[874,606,294,6]}
+{"kind":"textbox","slide":9,"role":"card body","text":"合成图能否训练出真实域可用模型，最终仍以 original_acc 和重复实验稳定性判断。","textChars":45,"textLines":1,"bbox":[874,606,294,6]}
+{"kind":"shape","slide":9,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":9,"role":"footer","text":"数据来源：DP-private 实验记录与 dp_experiments/outputs","textChars":44,"textLines":1,"bbox":[64,676,900,22]}
+{"kind":"shape","slide":10,"role":"top identity bar","bbox":[0,0,1280,18]}
+{"kind":"shape","slide":10,"role":"top accent bar","bbox":[0,18,1280,4]}
+{"kind":"shape","slide":10,"role":"section label","bbox":[64,38,440,28]}
+{"kind":"textbox","slide":10,"role":"section label","text":"差分隐私合成数据外包训练","textChars":12,"textLines":1,"bbox":[64,38,440,28]}
+{"kind":"shape","slide":10,"role":"slide number","bbox":[1156,38,60,28]}
+{"kind":"textbox","slide":10,"role":"slide number","text":"10","textChars":2,"textLines":1,"bbox":[1156,38,60,28]}
+{"kind":"shape","slide":10,"role":"title","bbox":[64,82,850,64]}
+{"kind":"textbox","slide":10,"role":"title","text":"结论与下一步","textChars":6,"textLines":1,"bbox":[64,82,850,64]}
+{"kind":"shape","slide":10,"role":"title rule","bbox":[64,154,1152,1.6]}
+{"kind":"shape","slide":10,"role":"metric card","bbox":[84,184,252,130]}
+{"kind":"shape","slide":10,"role":"metric accent","bbox":[84,184,8,130]}
+{"kind":"shape","slide":10,"role":"metric value","bbox":[108,206,204,44]}
+{"kind":"textbox","slide":10,"role":"metric value","text":"Diffusion+DP","textChars":12,"textLines":1,"bbox":[108,206,204,44]}
+{"kind":"shape","slide":10,"role":"metric label","bbox":[108,258,204,44]}
+{"kind":"textbox","slide":10,"role":"metric label","text":"保留为主方法，GAN+DP 暂不继续扩展","textChars":20,"textLines":1,"bbox":[108,258,204,44]}
+{"kind":"shape","slide":10,"role":"metric card","bbox":[364,184,252,130]}
+{"kind":"shape","slide":10,"role":"metric accent","bbox":[364,184,8,130]}
+{"kind":"shape","slide":10,"role":"metric value","bbox":[388,206,204,44]}
+{"kind":"textbox","slide":10,"role":"metric value","text":"original_acc","textChars":12,"textLines":1,"bbox":[388,206,204,44]}
+{"kind":"shape","slide":10,"role":"metric label","bbox":[388,258,204,44]}
+{"kind":"textbox","slide":10,"role":"metric label","text":"作为核心排序指标，synthetic_acc 只辅助解释","textChars":28,"textLines":1,"bbox":[388,258,204,44]}
+{"kind":"shape","slide":10,"role":"metric card","bbox":[644,184,252,130]}
+{"kind":"shape","slide":10,"role":"metric accent","bbox":[644,184,8,130]}
+{"kind":"shape","slide":10,"role":"metric value","bbox":[668,206,204,44]}
+{"kind":"textbox","slide":10,"role":"metric value","text":"k 优先","textChars":4,"textLines":1,"bbox":[668,206,204,44]}
+{"kind":"shape","slide":10,"role":"metric label","bbox":[668,258,204,44]}
+{"kind":"textbox","slide":10,"role":"metric label","text":"CIFAR10 提升主要来自扩大合成样本规模","textChars":22,"textLines":1,"bbox":[668,258,204,44]}
+{"kind":"shape","slide":10,"role":"metric card","bbox":[924,184,252,130]}
+{"kind":"shape","slide":10,"role":"metric accent","bbox":[924,184,8,130]}
+{"kind":"shape","slide":10,"role":"metric value","bbox":[948,206,204,44]}
+{"kind":"textbox","slide":10,"role":"metric value","text":"CIFAR10","textChars":7,"textLines":1,"bbox":[948,206,204,44]}
+{"kind":"shape","slide":10,"role":"metric label","bbox":[948,258,204,44]}
+{"kind":"textbox","slide":10,"role":"metric label","text":"下一阶段主要攻关对象","textChars":10,"textLines":1,"bbox":[948,258,204,44]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[96,372,250,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[104,379,234,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"下一步方向","textChars":5,"textLines":1,"bbox":[104,379,234,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[346,372,742,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[354,379,726,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"具体做法","textChars":4,"textLines":1,"bbox":[354,379,726,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[96,424,250,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[104,431,234,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"提高合成质量","textChars":6,"textLines":1,"bbox":[104,431,234,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[346,424,742,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[354,431,726,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"引入真实 DP-SGD U-Net 扩散模型、noise multiplicity、timestep 采样与 EMA。","textChars":59,"textLines":1,"bbox":[354,431,726,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[96,476,250,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[104,483,234,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"扩大有效样本","textChars":6,"textLines":1,"bbox":[104,483,234,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[346,476,742,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[354,483,726,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"CIFAR10 从 k=1000 继续到更大合成集，并增加低质量样本筛选。","textChars":37,"textLines":1,"bbox":[354,483,726,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[96,528,250,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[104,535,234,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"增强下游训练","textChars":6,"textLines":1,"bbox":[104,535,234,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[346,528,742,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[354,535,726,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"保持隐私口径一致，尝试预训练特征、ResNet/WRN、ensemble 与更充分训练。","textChars":44,"textLines":1,"bbox":[354,535,726,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[96,580,250,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[104,587,234,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"结果可信度","textChars":5,"textLines":1,"bbox":[104,587,234,42]}
+{"kind":"shape","slide":10,"role":"table cell","bbox":[346,580,742,52]}
+{"kind":"shape","slide":10,"role":"table text","bbox":[354,587,726,42]}
+{"kind":"textbox","slide":10,"role":"table text","text":"最优候选继续做 3 seeds 以上重复，并报告均值、标准差和训练成本。","textChars":36,"textLines":1,"bbox":[354,587,726,42]}
+{"kind":"shape","slide":10,"role":"table outline","bbox":[96,372,992,260]}
+{"kind":"shape","slide":10,"role":"footer","bbox":[64,676,900,22]}
+{"kind":"textbox","slide":10,"role":"footer","text":"阶段性结论：MNIST 可作为成熟结果，CIFAR10 聚焦样本质量与训练策略","textChars":39,"textLines":1,"bbox":[64,676,900,22]}

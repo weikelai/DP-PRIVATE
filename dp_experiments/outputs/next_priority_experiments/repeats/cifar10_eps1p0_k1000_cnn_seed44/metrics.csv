@@ -1,0 +1,2 @@
+method,epsilon,per_class,classifier,synthesis_seconds,train_seconds,original_pred_seconds,synthetic_pred_seconds,original_acc,synthetic_acc,generalization_gap,synthetic_images,synthetic_train_images,synthetic_eval_images
+diffusion_dp,1.0,1000,cnn,6.647257000000536,37.09940169999754,2.0332472000009147,0.5212869999995746,0.6116,0.689,0.07739999999999991,10000,8000,2000
