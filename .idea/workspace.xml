@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="34afdc52-321e-4c34-b541-0b76c2661bb0" name="Changes" comment="First commit" />
+    <list default="true" id="34afdc52-321e-4c34-b541-0b76c2661bb0" name="Changes" comment="First commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +59,7 @@
       <workItem from="1777444345363" duration="239000" />
       <workItem from="1777444699095" duration="11000" />
       <workItem from="1777444731342" duration="64000" />
-      <workItem from="1777445166765" duration="433000" />
+      <workItem from="1777445166765" duration="1246000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
